@@ -1,0 +1,7 @@
+/* source: https://stackoverflow.com/questions/36625690/how-to-make-sidebar-fixed-when-scroll-like-sticky */
+#bar-fixed {
+    height: 100vh;
+    top: 0px;
+    position: -webkit-sticky;
+    position: sticky;
+}

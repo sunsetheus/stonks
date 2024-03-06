@@ -1,0 +1,52 @@
+/* source: https://stackoverflow.com/questions/20751937/transition-background-color-via-slide-animation */
+.chip {
+  display: inline-block;
+  background-size: 200% 200%;
+  transition: background-position 1s;
+  cursor: pointer;
+  width: 100%;
+}
+
+.active-to-left {
+  animation: rightLeftAnimation 500ms forwards;
+}
+
+.active-to-right {
+  animation: leftRightAnimation 500ms forwards;
+}
+
+@keyframes leftRightAnimation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+@keyframes rightLeftAnimation {
+  0% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+.to-left {
+  background-image: linear-gradient(to left, #000033 50%, white 0);
+  background-position: right;
+}
+
+.to-left.active {
+  background-position: left;
+}
+
+.to-right {
+  background-image: linear-gradient(to right, #000033 50%, white 0);
+  background-position: left;
+}
+
+.to-right.active {
+  background-position: right;
+}
