@@ -19,41 +19,41 @@ export const DELETE = async(_req: Request, {params} : { params: { id: string }})
     }
 }
 
-export const UPDATE = async(req: Request, {params} : { params: { id: string }}) => {
-    try {
-        const { id } = params;
-        const checkTransaction = await prisma.transaction.findUnique({
-            where: {
-                id: parseInt(id, 10)
-            }
-        })
+// export const UPDATE = async(req: Request, {params} : { params: { id: string }}) => {
+//     try {
+//         const { id } = params;
+//         const checkTransaction = await prisma.transaction.findUnique({
+//             where: {
+//                 id: parseInt(id, 10)
+//             }
+//         })
 
-        if (!checkTransaction) {
-            return new Response("Transaction not found", { status: 404});
-        }
+//         if (!checkTransaction) {
+//             return new Response("Transaction not found", { status: 404});
+//         }
 
-        const body = await req.json();
-        const updatedTransaction = await prisma.transaction.update({
-            where: {
-                id: parseInt(id, 10)
-            },
+//         const body = await req.json();
+//         const updatedTransaction = await prisma.transaction.update({
+//             where: {
+//                 id: parseInt(id, 10)
+//             },
 
-            data: {
-                date: body.date,
-                category: body.category,
-                name: body.name,
-                money: body.money
-            }
-        })
+//             data: {
+//                 date: body.date,
+//                 category: body.category,
+//                 name: body.name,
+//                 money: body.money
+//             }
+//         })
         
-        return new Response(JSON.stringify(updatedTransaction), {
-            headers: {
-                "Content-Type": "application/json"
-            },
-            status: 201
-        })
+//         return new Response(JSON.stringify(updatedTransaction), {
+//             headers: {
+//                 "Content-Type": "application/json"
+//             },
+//             status: 201
+//         })
 
-    } catch (error: any) {
-        return new Response("UPDATE transaction error: " + error.message);
-    }
-}
+//     } catch (error: any) {
+//         return new Response("UPDATE transaction error: " + error.message);
+//     }
+// }
