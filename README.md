@@ -1,8 +1,15 @@
+## Project money manager app yang menawarkan beberapa fitur menarik, diantaranya:
+- Homepage: memberikan summary tentang pengeluaran, pemasukan, dan uang saat ini. Serta terdapat informasi tambahan 10 transaksi terakhir (berdasarkan tanggal) yang dapat dilihat semua maupun membaginya ke dalam tipenya
+- My Wallet: Memberikan informasi seluruh transaksi yang ada dan dapat dilihat dengan list maupun calendar. Terdapat tombol delete untuk menghapus transaksi yang tidak diperlukan (tombol update hanya pajangan :"))
+- Charts: Menampilkan informasi ringkasan berupa grafik, grafik batang, garis, dan juga pie yang mendeskripsikan halnya masing-masing. Grafik ini juga dapat dilihat berdasarkan tahun.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+run `npm install`
+
+Then, run the development server:
 
 ```bash
 npm run dev
